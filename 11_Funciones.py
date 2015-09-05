@@ -42,3 +42,36 @@ def Indefinida(*args):
 
 print "\n Funciones con parametros indefinidos \n"
 Indefinida(1,2,354,566,False,"Texto",112.10)
+
+def indefinidosFuntion(**kwargs):
+	print kwargs
+	for x in kwargs.items():
+		print x
+
+
+indefinidosFuntion(color="rojo",numeroP=120)
+
+def functionIndefinidos(*args,**kwargs):
+	# argumentos normales
+	for x in args:
+		print x
+	
+	# argumentos key-word (diccionario)
+	for y in kwargs.items():
+		print y
+
+functionIndefinidos(1,23.4,23,"texto",False,colores="pan",numeropar=4578)
+
+
+# funciones que retornan valores
+print "\n funciones que retornan valores \n"	 		 	
+def DobleMitad(numero1):
+	return numero1*2,float(numero1)/2
+		
+
+print DobleMitad(5)
+
+doble, mitad = DobleMitad(7)
+
+print "\n doble \n ",doble
+print "\n mitad  \n ",mitad
